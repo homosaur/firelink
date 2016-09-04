@@ -1,0 +1,30 @@
+{
+  "name": "firelink",
+  "version": "0.1.0",
+  "description": "Firelink CMS",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/homosaur/firelink.git"
+  },
+  "keywords": [
+    "CMS"
+  ],
+  "author": "Paul Graham <paul@bytefair.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/homosaur/firelink/issues"
+  },
+  "homepage": "https://gitlab.com/homosaur/firelink#README",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "standard": "^8.0.0"
+  }
+}

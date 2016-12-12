@@ -2,29 +2,40 @@
   "name": "firelink",
   "version": "0.1.0",
   "description": "Firelink CMS",
+  "license": "ISC",
+  "author": "Paul Graham <paul@bytefair.com>",
+  "contributors": [
+    "Omar Rasool <webdevromar@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/homosaur/firelink.git"
+  },
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/homosaur/firelink.git"
+    "test": "mocha test",
+    "test:watch": "mocha test --watch"
   },
   "keywords": [
     "CMS"
   ],
-  "author": "Paul Graham <paul@bytefair.com>",
-  "license": "ISC",
   "bugs": {
     "url": "https://gitlab.com/homosaur/firelink/issues"
   },
   "homepage": "https://gitlab.com/homosaur/firelink#README",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.0.2",
-    "standard": "^8.0.0"
+    "chai": "latest",
+    "eslint": "^3.12.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "mocha": "latest"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "lowdb": "^0.14.0"
   }
 }

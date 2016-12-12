@@ -2,8 +2,6 @@ const express = require('express')
 
 const app = express()
 
-app.use(express.static('./'))
-
 // component API
 app.use('/api/component/create', require('./component/create'))
 

@@ -10,7 +10,7 @@ router.route('/:id').get((req, res) => {
     res.status(200).send(fetched)
   }
 
-  res.send(404)
+  res.status(404).send()
 })
 
 module.exports = router

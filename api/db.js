@@ -31,7 +31,7 @@ module.exports = {
    */
   find: function find (type, id) {
     const fetched = db.get(type)
-                      .find({id:id})
+                      .find({id: id})
                       .value()
 
     if (typeof fetched === 'undefined') {

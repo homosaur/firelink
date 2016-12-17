@@ -1,7 +1,7 @@
 const supertest = require('supertest')
 const server = supertest.agent('http://localhost:9001')
 
-const should = require('chai').should()
+const should = require('chai').should() // eslint-disable-line
 
 // created testId
 let testId

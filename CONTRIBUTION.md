@@ -26,3 +26,7 @@ tight for everyone's sanity.
 1.  All code must pass linters. The following linters are used on this project:
     -   JavaScript - ESLint, Standard Style-based config attached plus additions
     -   Markdown - Remark Lint, recommended and consistent config attached
+2.  All code submitted must pass full test suite. If you add features, those
+    features need tests as well.
+3.  Backend JS is based on compatibility with most recent Node.js LTE. We're not
+    yet using Babel or any compiler, so assume native compatibility only.

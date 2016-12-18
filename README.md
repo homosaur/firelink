@@ -1,3 +1,5 @@
+![Firelink logo](logo.png)
+
 # Firelink
 
 Firelink is a CMS made with Node.js that aims to replace complex CMS options
@@ -10,14 +12,14 @@ There are two major constructs in Firelink, pages and collections.
 ### Pages
 
 Pages are single-use views that you can define using custom fields. They are
-not repeatable and are considered standalone, although you can duplicate pages 
+not repeatable and are considered standalone, although you can duplicate pages
 and their fields if you need to reuse them for some reason.
 
 ### Collections
 
 Collections are groups of content that share the same data model. They come in
 two flavors, serialized and hierarchical. Serialized collections are used for
-things like blog articles. Heriarchical collections are used for things like 
+things like blog articles. Heriarchical collections are used for things like
 department listings at a company.
 
 ## Refactorability
@@ -37,3 +39,10 @@ it's totally possible to hook up any database you want for creating components.
 When a page node is created, it generates a JSON file to store data related to
 that node. While you can edit these files yourself in a pinch, it's generally
 better to edit them through the site admin.
+
+## Credits
+Firelink logo created using elements by [Lilit Kalachyan][sword] and [Jacqueline
+Fernandes][flame].
+
+  [sword]: https://thenounproject.com/search/?q=sword&i=131552
+  [flame]: https://thenounproject.com/search/?q=fire&i=674262

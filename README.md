@@ -42,7 +42,8 @@ better to edit them through the site admin.
 
 ## Credits
 Firelink logo created using elements by [Lilit Kalachyan][sword] and [Jacqueline
-Fernandes][flame].
+Fernandes][flame]. Logo is licensed under [CC-BY-3.0-US][cclicense].
 
   [sword]: https://thenounproject.com/search/?q=sword&i=131552
   [flame]: https://thenounproject.com/search/?q=fire&i=674262
+  [cclicense]: https://creativecommons.org/licenses/by/3.0/us/

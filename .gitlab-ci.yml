@@ -17,5 +17,4 @@ cache:
 test:
   script:
    - npm install
-   - node ./api
    - npm test

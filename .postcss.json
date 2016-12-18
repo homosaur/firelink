@@ -1,0 +1,9 @@
+{
+  "use": [
+    "postcss-import",
+    "postcss-cssnext",
+    "postcss-reporter"
+  ],
+  "output": "./admin/dist/bundle.css",
+  "map": "file"
+}

@@ -16,6 +16,7 @@
     "test": "test"
   },
   "scripts": {
+    "js:compile": "rollup --config",
     "lint": "run-s lint:js lint:markdown lint:styles",
     "lint:js": "eslint .",
     "lint:markdown": "remark .",
@@ -23,7 +24,10 @@
     "styles:compile": "postcss --config .postcss.json admin/styles/entry.css",
     "test": "run-s lint test:api",
     "test:api": "mocha test",
-    "test:watch": "mocha test --watch"
+    "watch": "parallelshell 'npm run watch:js' 'npm run watch:styles'",
+    "watch:js": "rollup --watch --config",
+    "watch:styles": "postcss --config .postcss.json --watch admin/styles/entry.css",
+    "watch:test": "mocha test --watch"
   },
   "keywords": [
     "CMS"
@@ -33,12 +37,14 @@
   },
   "homepage": "https://gitlab.com/homosaur/firelink#README",
   "devDependencies": {
+    "babel-preset-es2015-rollup": "^3.0.0",
     "chai": "^3.5.0",
     "eslint": "^3.12.0",
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
     "mocha": "^3.2.0",
+    "parallelshell": "^2.0.0",
     "postcss-cli": "^2.6.0",
     "postcss-cssnext": "^2.9.0",
     "postcss-import": "^9.0.0",
@@ -47,6 +53,12 @@
     "remark-lint": "^5.2.0",
     "remark-preset-lint-consistent": "^1.0.0",
     "remark-preset-lint-recommended": "^1.0.0",
+    "rollup": "^0.37.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^6.0.0",
+    "rollup-plugin-eslint": "^3.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-watch": "^2.5.0",
     "stylelint": "^7.6.0",
     "stylelint-config-standard": "^15.0.0",
     "tachyons": "^4.6.1"

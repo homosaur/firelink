@@ -19,8 +19,8 @@ module.exports = {
       .value()
 
     return db.get(type)
-      .push({id: uuid.generate()})
-      .value()
+             .push({id: uuid.generate()})
+             .value()
   },
 
   /**
@@ -39,5 +39,25 @@ module.exports = {
     }
 
     return fetched
+  },
+
+  /**
+   * trashes on object of a type with a specific ID
+   * @param  {String} type The defined content type to trash
+   * @param  {String} id   ID of the object to trash
+   * @return {Boolean}     True if deleted, false if not
+   */
+  trash: function trash (type, id) {
+    const trashed = db.get(type)
+                      .find({id: id})
+                      .assign({trashed: true})
+                      .value()
+
+    // if an object is not found, it will only have assigned key
+    if (Object.keys(trashed).length > 1) {
+      return true
+    }
+
+    return false
   }
 }

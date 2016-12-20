@@ -42,6 +42,26 @@ module.exports = {
   },
 
   /**
+   * recovers on object of a type with a specific ID
+   * @param  {String} type The defined content type to delete
+   * @param  {String} id   ID of the object to delete
+   * @return {Boolean}     True if deleted, false if not
+   */
+  recover: function recover (type, id) {
+    const recovered = db.get(type)
+                        .find({id: id})
+                        .assign({trashed: false})
+                        .value()
+
+    // if an object is not found, it will only have assigned key
+    if (Object.keys(recovered).length > 1) {
+      return true
+    }
+
+    return false
+  },
+
+  /**
    * trashes on object of a type with a specific ID
    * @param  {String} type The defined content type to trash
    * @param  {String} id   ID of the object to trash

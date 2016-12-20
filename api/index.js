@@ -6,6 +6,7 @@ const app = express()
 app.use('/api/component/create', require('./component/create'))
 app.use('/api/component/find', require('./component/find'))
 app.use('/api/component/trash', require('./component/trash'))
+app.use('/api/component/recover', require('./component/recover'))
 
 // boot dat
 app.listen(9001, () => {

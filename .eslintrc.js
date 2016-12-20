@@ -1,5 +1,8 @@
 module.exports = {
-  'extends': 'standard',
+  'extends': [
+    'standard',
+    'standard-flow'
+  ],
   'installedESLint': true,
   'plugins': [
     'standard',

@@ -1,3 +1,11 @@
 {
-  "presets": ["es2015-rollup"]
+  "env": {
+    "backend": {
+      "presets": ["es2015-node6"],
+      "plugins": ["transform-flow-strip-types"]
+    },
+    "development": {
+      "presets": ["es2015-rollup"]
+    }
+  }
 }

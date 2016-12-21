@@ -1,11 +1,11 @@
-const express = require('express')
-const db = require('../db')
+import express from 'express'
+import {find} from '../db'
 
 const router = express.Router()
 
 router.route('/:id').get((req, res) => {
-  const fetched = db.find('components', req.params.id)
-
+  const fetched = find('components', req.params.id)
+f
   if (fetched) {
     res.status(200).send(fetched)
   }
@@ -13,4 +13,4 @@ router.route('/:id').get((req, res) => {
   res.status(404).send()
 })
 
-module.exports = router
+export default router

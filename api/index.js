@@ -1,12 +1,16 @@
-const express = require('express')
-
+import express from 'express'
 const app = express()
 
+import create from './component/create'
+import find from './component/find'
+import trash from './component/trash'
+import recover from './component/recover'
+
 // component API
-app.use('/api/component/create', require('./component/create'))
-app.use('/api/component/find', require('./component/find'))
-app.use('/api/component/trash', require('./component/trash'))
-app.use('/api/component/recover', require('./component/recover'))
+app.use('/api/component/create', create)
+app.use('/api/component/find', find)
+app.use('/api/component/trash', trash)
+app.use('/api/component/recover', recover)
 
 // boot dat
 app.listen(9001, () => {

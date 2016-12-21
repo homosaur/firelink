@@ -24,6 +24,7 @@
     "styles:compile": "postcss --config .postcss.json admin/styles/entry.css",
     "test": "run-s lint test:api",
     "test:api": "mocha test",
+    "start:api": "BABEL_ENV=backend babel-node ./api",
     "watch": "parallelshell 'npm run watch:js' 'npm run watch:styles'",
     "watch:js": "rollup --watch --config",
     "watch:styles": "postcss --config .postcss.json --watch admin/styles/entry.css",
@@ -66,6 +67,9 @@
     "tachyons": "^4.6.1"
   },
   "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-flow-strip-types": "^6.21.0",
+    "babel-preset-es2015-node6": "^0.4.0",
     "express": "^4.14.0",
     "lowdb": "^0.14.0",
     "npm-run-all": "^3.1.2",

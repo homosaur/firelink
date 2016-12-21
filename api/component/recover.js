@@ -1,10 +1,10 @@
-const express = require('express')
-const db = require('../db')
+import express from 'express'
+import {recover} from '../db'
 
 const router = express.Router()
 
 router.route('/:id').get((req, res) => {
-  const recovered = db.recover('components', req.params.id)
+  const recovered = recover('components', req.params.id)
 
   if (recovered) {
     res.status(200).send(recovered)
@@ -13,4 +13,4 @@ router.route('/:id').get((req, res) => {
   }
 })
 
-module.exports = router
+export default router

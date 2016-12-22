@@ -14,7 +14,7 @@ const baseModel = {
  * @param  {String} type The defined content type to create
  * @return {String}      ID of the created object
  */
-export function create (type: string) {
+export function create (type: string): string {
   db.defaults(baseModel)
     .value()
 
@@ -29,7 +29,7 @@ export function create (type: string) {
  * @param  {String} id      ID of the object to fetch
  * @return {Object|Boolean} Contents of the requested object, or false if none found
  */
-export function find (type: string, id: string) {
+export function find (type: string, id: string): Object|boolean {
   const fetched = db.get(type)
                     .find({id: id})
                     .value()
@@ -47,7 +47,7 @@ export function find (type: string, id: string) {
  * @param  {String} id   ID of the object to delete
  * @return {Boolean}     True if deleted, false if not
  */
-export function recover (type: string, id: string) {
+export function recover (type: string, id: string): boolean {
   const recovered = db.get(type)
                       .find({id: id})
                       .assign({trashed: false})
@@ -67,7 +67,7 @@ export function recover (type: string, id: string) {
  * @param  {String} id   ID of the object to trash
  * @return {Boolean}     True if deleted, false if not
  */
-export function trash (type: string, id: string) {
+export function trash (type: string, id: string): boolean {
   const trashed = db.get(type)
                     .find({id: id})
                     .assign({trashed: true})

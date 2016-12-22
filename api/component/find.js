@@ -5,7 +5,7 @@ const router = express.Router()
 
 router.route('/:id').get((req, res) => {
   const fetched = find('components', req.params.id)
-f
+
   if (fetched) {
     res.status(200).send(fetched)
   }

@@ -24,6 +24,10 @@ describe('component', () => {
     const dbObject = db.find('components', 'invalidId')
     expect(dbObject).to.be.false
   })
+
+  it('should be able to mark item as trashed')
+
+  it('should be able to remove item from trash')
 })
 
 after(() => {

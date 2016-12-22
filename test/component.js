@@ -25,9 +25,15 @@ describe('component', () => {
     expect(dbObject).to.be.false
   })
 
-  it('should be able to mark item as trashed')
+  it('should be able to mark item as trashed', () => {
+    const trashed = db.trash('components', testId)
+    expect(trashed).to.be.true
+  })
 
-  it('should be able to remove item from trash')
+  it('should be able to remove item from trash', () => {
+    const recovered = db.recover('components', testId)
+    expect(recovered).to.be.true
+  })
 })
 
 after(() => {

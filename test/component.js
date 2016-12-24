@@ -20,7 +20,7 @@ describe('component', () => {
     expect(dbObject.id).to.have.length(9)
   })
 
-  it('should return a 404 upon nonexistant object using invalid id', () => {
+  it('should return a 404 upon requesting bad object', () => {
     const dbObject = db.find('components', 'invalidId')
     expect(dbObject).to.be.false
   })

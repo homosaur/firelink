@@ -107,8 +107,8 @@ True/false option that looks like a switch.
 
 #### structure
 
-*   name (string)*
 *   identity (string)*
+*   description (string)*
 *   value (boolean)*
 
 ### Radio

@@ -1,6 +1,7 @@
 function Bool () {
-  this.name = ''
-  this.data = ''
+  this.identity = ''
+  this.description = ''
+  this.value = false
 }
 
 export default Bool

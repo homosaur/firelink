@@ -1,4 +1,3 @@
-// @flow
 import MarkdownIt from 'markdown-it'
 import hljs from 'highlight.js'
 

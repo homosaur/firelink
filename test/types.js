@@ -20,7 +20,7 @@ describe('Textarea', () => {
 })
 
 describe('Radio', () => {
-  it('should be able to set options', () => {
+  it('setOptions should be able to set options', () => {
     radio = Object.create(Radio)
     const options = [
       ['option1', 'The first option'],
@@ -30,4 +30,8 @@ describe('Radio', () => {
     expect(radio.options).to.be.an('array')
     expect(radio.options.length).to.equal(2)
   })
+
+  it('getOptions should return an existing value')
+  it('getOptions should return false if value does not exist')
+  it('setOptions should modify an existing value')
 })

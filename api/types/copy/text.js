@@ -1,10 +1,6 @@
 const Text = {
-  name: function () {
-    return this.name
-  },
-  data: function () {
-    return this.data
-  }
+  name: '',
+  data: ''
 }
 
 export default Text

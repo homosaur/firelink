@@ -18,15 +18,9 @@ const md = new MarkdownIt({
 })
 
 const Textarea = {
-  name: function () {
-    return this.name || ''
-  },
-  data: function () {
-    return this.data || ''
-  },
-  html: function () {
-    return this.html || ''
-  },
+  name: '',
+  data: '',
+  html: '',
   process: function () {
     this.html = md.render(this.data)
   }

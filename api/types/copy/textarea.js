@@ -1,3 +1,4 @@
+// @flow
 import MarkdownIt from 'markdown-it'
 import hljs from 'highlight.js'
 
@@ -16,17 +17,19 @@ const md = new MarkdownIt({
   }
 })
 
-function Textarea () {
-  this.name = ''
-  this.data = ''
-  this.html = ''
-}
-
-/**
- * Process raw Markdown content into HTML
- */
-Textarea.prototype.process = function () {
-  this.html = md.render(this.data)
+const Textarea = {
+  name: function () {
+    return this.name || ''
+  },
+  data: function () {
+    return this.data || ''
+  },
+  html: function () {
+    return this.html || ''
+  },
+  process: function () {
+    this.html = md.render(this.data)
+  }
 }
 
 export default Textarea

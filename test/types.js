@@ -7,7 +7,7 @@ before(() => {
 describe('Textarea', () => {
   it('should be able to process Markdown data into HTML', () => {
     const expectedOutput = '<p>testing</p>\n'
-    const textarea = Object.create(Textarea.prototype)
+    const textarea = Object.create(Textarea)
 
     textarea.data = 'testing'
     const success = textarea.process()

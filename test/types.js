@@ -10,7 +10,7 @@ describe('Textarea', () => {
     const textarea = Object.create(Textarea)
 
     textarea.data = 'testing'
-    const success = textarea.process()
+    textarea.process()
     expect(textarea.html).to.equal(expectedOutput)
   })
 })
